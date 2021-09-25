@@ -54,11 +54,7 @@ def main():
     word_to_translate = input()
     # word_to_translate = scan_string("Word to translate: ")
 
-    print()  # Formatting purposes
-
-    print("Translating...")
-
-    print()  # Formatting purposes
+    print("\nTranslating...\n")
 
     if source_number == target_number:
         print("Language numbers cannot denote the same language")

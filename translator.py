@@ -50,9 +50,9 @@ def get_translations(source_number, target_number, word_to_translate):
                 if response.status_code == 200:
                     translations.append(parse_response(source_language, target_language, response))
             except requests.ConnectionError:
-                print(f"Unable to establish connection")
+                print(f"Unable to establish connection\n")
             except requests.HTTPError:
-                print(f"Unable to translate {word_to_translate} from {source_language} to {target_language}")
+                print(f"Unable to translate '{word_to_translate}' from {source_language} to {target_language}\n")
 
     return translations
 

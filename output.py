@@ -25,7 +25,7 @@ def write_translations(translations, word_to_translate):
 
         print(f"{t.target_language} Examples:")
         for i in range(0, min(5, len(t.target_language_sentences))):  # Print at most 5 example sentence pairs
-            print(f"{t.source_language_sentences[i]}\n{t.target_language_sentences[i]}\n")
+            print(f"{t.source_language_sentences[i]}\n{t.target_language_sentences[i]}")
 
     sys.stdout.close()  # Close file
     sys.stdout = original_stdout  # Change standard output back to what it originally was
