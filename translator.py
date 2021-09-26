@@ -65,14 +65,17 @@ def parse_response(source_language, target_language, response):
     soup = BeautifulSoup(response.content, "html.parser")
 
     for a in soup.find_all("a", {"class": ["translation", "ltr", "dict"]}):
-        translated_words.append(a.text.strip())
+        if a.text.strip():
+            translated_words.append(a.text.strip())
     translated_words = translated_words[1:]  # Remove unnecessary "Translation" string from the beginning of the list
 
     for div in soup.find_all("div", {"class": "src"}):
-        source_language_sentences.append(div.text.strip())
+        if div.text.strip():
+            source_language_sentences.append(div.text.strip())
 
     for div in soup.find_all("div", {"class": "trg"}):
-        target_language_sentences.append(div.text.strip())
+        if div.text.strip():
+            target_language_sentences.append(div.text.strip())
 
     return Translation(source_language,
                        target_language,

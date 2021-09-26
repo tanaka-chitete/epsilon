@@ -4,7 +4,7 @@ from output import print_translations, write_translations
 from textwrap import dedent
 
 def main():
-    print("\nEpsilon (v2.0)\n")
+    print("\nEpsilon (v2.2)\n")
 
     source_languages_menu = """\
         Source Languages
