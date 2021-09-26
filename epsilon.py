@@ -1,5 +1,5 @@
 from translator import get_translations
-from user_interface import getInt, getStr
+from user_interface import input_int, input_string
 from output import print_translations, write_translations
 from textwrap import dedent
 
@@ -22,7 +22,7 @@ def main():
         12. Spanish
         13. Turkish"""
     print(dedent(source_languages_menu))
-    source_number = getInt(1, 13, "Source language number: ")
+    source_number = input_int(1, 13, "Source language number: ")
 
     print()  # Formatting purposes
 
@@ -43,11 +43,11 @@ def main():
         12. Spanish
         13. Turkish"""
     print(dedent(target_languages_menu))
-    target_number = getInt(0, 13, "Target language number: ")  # TODO: Implement user_input.py class
+    target_number = input_int(0, 13, "Target language number: ")
 
     print()  # Formatting purposes
 
-    word_to_translate = getStr("Word to translate: ")
+    word_to_translate = input_string("Word to translate: ")
 
     print("\nTranslating...\n")
 

@@ -31,8 +31,7 @@ def write_translations(translations, word_to_translate):
         for i in range(0, min(5, len(t.target_language_sentences))):  # Print at most 5 example sentence pairs
             print(f"{t.source_language_sentences[i]}")
             print(f"{t.target_language_sentences[i]}")
-            if i < min(5, len(t.target_language_sentences)) - 1:
-                print()
+            print()
 
     sys.stdout.close()  # Close file
     sys.stdout = original_stdout  # Change standard output back to what it originally was
