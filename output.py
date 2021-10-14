@@ -15,10 +15,11 @@ def print_translations(translations):
 
 def write_translations(translations, word_to_translate):
     original_stdout = sys.stdout  # Save reference of the original standard output
-    sys.stdout = open(f"{word_to_translate}.txt", "w")  # Redirect output to file
+    translation_filename = f"{word_to_translate}.txt"
+    sys.stdout = open(translation_filename, "w")  # Redirect output to translation file
 
     print("Epsilon (v2.2)")
-    print()  # Formatting purposes
+    print()  # For formatting purposes
 
     for t in translations:
         print(f"{t.target_language} Translations:")
@@ -35,3 +36,6 @@ def write_translations(translations, word_to_translate):
 
     sys.stdout.close()  # Close file
     sys.stdout = original_stdout  # Change standard output back to what it originally was
+
+    print(f"Translation file saved as {translation_filename}")
+    print()  # For formatting purposes
