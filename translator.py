@@ -20,7 +20,6 @@ languages = [
 ]
 
 
-
 def get_translations(source_number, target_number, word_to_translate):
     source_index = source_number - 1  # Convert to zero-based index
     if target_number == 0:

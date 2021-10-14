@@ -4,7 +4,7 @@ from output import print_translations, write_translations
 from textwrap import dedent
 
 def translate():
-    source_languages_menu = """\
+    source_language_menu = """\
         Source Language
 
         1.  Arabic
@@ -21,11 +21,11 @@ def translate():
         12. Spanish
         13. Turkish
         """
-    print(dedent(source_languages_menu))
+    print(dedent(source_language_menu))
     source_number = input_int(1, 13, "Language: ")
     print()  # For formatting purposes
 
-    target_languages_menu = """\
+    target_language_menu = """\
         Target Language
 
         0.  All languages
@@ -43,7 +43,7 @@ def translate():
         12. Spanish
         13. Turkish
         """
-    print(dedent(target_languages_menu))
+    print(dedent(target_language_menu))
     target_number = input_int(0, 13, "Language: ")
     print()  # For formatting purposes
 
@@ -60,4 +60,4 @@ def translate():
             write_translations(translations, word_to_translate)
 
 def close():
-    print("Epsilon (v2.3) closed")
+    print("Epsilon (v2.3)")
