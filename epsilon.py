@@ -2,8 +2,6 @@ from user_input import input_int
 from operations import translate, close
 from textwrap import dedent
 
-TRANSLATE = 1
-
 def main():
     print()  # For formatting purposes
     while True:
@@ -17,7 +15,7 @@ def main():
         user_input = input_int(0, 1, "Operation: ")
         print()  # For formatting purposes
 
-        if user_input == TRANSLATE:
+        if user_input == 1:
             translate()
         else:
             close()
