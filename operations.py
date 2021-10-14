@@ -44,7 +44,7 @@ def translate():
         13. Turkish
         """
     print(dedent(target_language_menu))
-    target_number = input_string(0, 13, "Language: ")
+    target_number = input_int(0, 13, "Language: ")
     print()  # For formatting purposes
 
     if source_number == target_number:
