@@ -1,4 +1,4 @@
-from user_interface import input_int
+from user_input import input_int
 from operations import translate, close
 from textwrap import dedent
 

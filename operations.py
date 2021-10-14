@@ -1,5 +1,5 @@
 from translator import get_translations
-from user_interface import input_int, input_string
+from user_input import input_int, input_string
 from output import print_translations, write_translations
 from textwrap import dedent
 
@@ -44,7 +44,7 @@ def translate():
         13. Turkish
         """
     print(dedent(target_language_menu))
-    target_number = input_int(0, 13, "Language: ")
+    target_number = input_string(0, 13, "Language: ")
     print()  # For formatting purposes
 
     if source_number == target_number:
