@@ -1,5 +1,5 @@
 def input_int(low, high, prompt):
-    error = f"Language number must be between {low} and {high} inclusive"
+    error = f"Language number must be between {low} and {high} inclusive"  # TODO: Refactor
 
     out = prompt
     user_input = None
